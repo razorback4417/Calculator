@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //github testing...
         // not using "."; point or "%"; percent
-        Button one = (Button) findViewById(R.id.one);
+        //test
+        final Button one = (Button) findViewById(R.id.one);
         Button two = (Button) findViewById(R.id.two);
         Button three = (Button) findViewById(R.id.three);
         Button four = (Button) findViewById(R.id.four);
@@ -31,18 +32,20 @@ public class MainActivity extends AppCompatActivity {
         Button divide = (Button) findViewById(R.id.divide);
         Button clear = (Button) findViewById(R.id.clear);
         Button equal = (Button) findViewById(R.id.equal);
-        Button point = (Button) findViewById(R.id.point);
+        // Button point = (Button) findViewById(R.id.point);
+        TextView result1 = (TextView) findViewById(R.id.textView);
 
 
         one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView resultTextView = (TextView) findViewById(R.id.textView);
+                int num1 = Integer.parseInt(one.getText().toString());
+                int result = num1
+                result1.setText(result);
 
-                int result = num1 + num2;
-                resultTextView.setText(result + "");
             }
         });
+
 
 
 
