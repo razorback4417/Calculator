@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Button divide = (Button) findViewById(R.id.divide);
         Button clear = (Button) findViewById(R.id.clear);
         Button equal = (Button) findViewById(R.id.equal);
-        Button point = (Button) findViewById(R.id.point);
+        Button point = (Button) findViewById(R.id.point); 
 
 
         one.setOnClickListener(new View.OnClickListener() {
