@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         // not using "."; point or "%"; percent
         //test
         //another test
-        final Button one = (Button) findViewById(R.id.one);
+        Button one = (Button) findViewById(R.id.one);
         Button two = (Button) findViewById(R.id.two);
         Button three = (Button) findViewById(R.id.three);
         Button four = (Button) findViewById(R.id.four);
@@ -45,20 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
     }
 }
