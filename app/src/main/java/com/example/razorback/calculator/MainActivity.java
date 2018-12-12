@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         // not using "."; point or "%"; percent
         //test
         //another test
-        final Button one = (Button) findViewById(R.id.one);
+        Button one = (Button) findViewById(R.id.one);
         Button two = (Button) findViewById(R.id.two);
         Button three = (Button) findViewById(R.id.three);
         Button four = (Button) findViewById(R.id.four);
@@ -41,7 +41,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int num1 = Integer.parseInt(one.getText().toString());
                 int result = num1
-                result1.setText(result);
+                result1.setText(result + "");
+
+            }
+        });
+        one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int num1 = Integer.parseInt(one.getText().toString());
+                int result = num1
+                result1.setText(result + "");
 
             }
         });
