@@ -14,8 +14,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // not using "."; point or "%"; percent
-        //test
-        //another test
         Button one = (Button) findViewById(R.id.one);
         Button two = (Button) findViewById(R.id.two);
         Button three = (Button) findViewById(R.id.three);
@@ -35,16 +33,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Button point = (Button) findViewById(R.id.point);
         TextView result1 = (TextView) findViewById(R.id.textView);
 
+    }
+    @Override
+    public void onClick(View v) {
 
-        one.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int num1 = Integer.parseInt(one.getText().toString());
-                int result = num1
-                result1.setText(result);
+        switch (v.getId()) {
 
-            }
-        });
-        
+            case R.id.one:
+                break;
+
+            case R.id.two:
+                // do your code
+                break;
+
+            case R.id.three:
+                // do your code
+                break;
+
+            default:
+                break;
+        }
+
     }
 }
