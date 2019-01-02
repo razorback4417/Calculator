@@ -9,7 +9,15 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {//implements View.OnClickListener {
 
-    @Override
+    //@Override
+    int old_value = 0;
+    boolean p = false;
+    boolean s = false;
+    boolean m = false;
+    boolean d = false;
+    boolean e = false;
+    //int new_value = 0;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -96,7 +104,46 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
         plus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                result1.setText(result1 = " ");
+                p = true;
+                old_value = Integer.parseInt(result1.getText().toString());
+                result1.setText("");
+
+            }
+        });
+        subtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                s = true;
+                result1.setText("");
+            }
+        });
+        mult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                m = true;
+                result1.setText("");
+            }
+        });
+        divide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                d = true;
+                result1.setText("");
+            }
+        });
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                result1.setText("");
+            }
+        });
+        equal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //if (p=)
+                int new_value =  Integer.parseInt(result1.getText().toString());
+                int result = old_value + new_value;
+                result1.setText(Integer.toString(result));
             }
         });
     }
