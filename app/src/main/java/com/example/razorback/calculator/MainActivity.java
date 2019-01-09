@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 s = true;
+                old_value = Integer.parseInt(result1.getText().toString());
                 result1.setText("");
             }
         });
@@ -121,6 +122,7 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 m = true;
+                old_value = Integer.parseInt(result1.getText().toString());
                 result1.setText("");
             }
         });
@@ -128,22 +130,48 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 d = true;
+                old_value = Integer.parseInt(result1.getText().toString());
                 result1.setText("");
             }
         });
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                old_value = 0;
                 result1.setText("");
             }
         });
         equal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //if (p=)
-                int new_value =  Integer.parseInt(result1.getText().toString());
-                int result = old_value + new_value;
-                result1.setText(Integer.toString(result));
+                if (p == true) {
+                    int new_value = Integer.parseInt(result1.getText().toString());
+                    int result = old_value + new_value;
+                    result1.setText(Integer.toString(result));
+                    p = false;
+                }
+
+                if (s == true) {
+                    int new_value1 = Integer.parseInt(result1.getText().toString());
+                    int result = old_value - new_value1;
+                    result1.setText(Integer.toString(result));
+                    s = false;
+                }
+
+                if (m == true) {
+                    int new_value2 = Integer.parseInt(result1.getText().toString());
+                    int result = old_value * new_value2;
+                    result1.setText(Integer.toString(result));
+                    m = false;
+                }
+
+                if (d == true) {
+                    int new_value3 = Integer.parseInt(result1.getText().toString());
+                    int result = old_value / new_value3;
+                    result1.setText(Integer.toString(result));
+                    d = false;
+                }
+
             }
         });
     }
