@@ -1,4 +1,4 @@
-package com.example.razorback.calculator;
+package com.yac.razorback.calculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

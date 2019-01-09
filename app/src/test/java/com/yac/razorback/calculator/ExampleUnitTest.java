@@ -1,4 +1,4 @@
-package com.example.razorback.calculator;
+package com.yac.razorback.calculator;
 
 import org.junit.Test;
 

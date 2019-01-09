@@ -1,4 +1,4 @@
-package com.example.razorback.calculator;
+package com.yac.razorback.calculator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
