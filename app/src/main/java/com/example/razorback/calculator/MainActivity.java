@@ -4,13 +4,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {//implements View.OnClickListener {
 
     //@Override
-    int old_value = 0;
+    float old_value = 0;
     boolean p = false;
     boolean s = false;
     boolean m = false;
@@ -105,7 +104,7 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 p = true;
-                old_value = Integer.parseInt(result1.getText().toString());
+                old_value = Float.parseFloat(result1.getText().toString());
                 result1.setText("");
 
             }
@@ -114,7 +113,7 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 s = true;
-                old_value = Integer.parseInt(result1.getText().toString());
+                old_value = Float.parseFloat(result1.getText().toString());
                 result1.setText("");
             }
         });
@@ -122,7 +121,7 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 m = true;
-                old_value = Integer.parseInt(result1.getText().toString());
+                old_value = Float.parseFloat(result1.getText().toString());
                 result1.setText("");
             }
         });
@@ -130,7 +129,7 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 d = true;
-                old_value = Integer.parseInt(result1.getText().toString());
+                old_value = Float.parseFloat(result1.getText().toString());
                 result1.setText("");
             }
         });
@@ -145,30 +144,30 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
             @Override
             public void onClick(View v) {
                 if (p == true) {
-                    int new_value = Integer.parseInt(result1.getText().toString());
-                    int result = old_value + new_value;
-                    result1.setText(Integer.toString(result));
+                    float new_value = Float.parseFloat(result1.getText().toString());
+                    float result = old_value + new_value;
+                    result1.setText(Float.toString(result));
                     p = false;
                 }
 
                 if (s == true) {
-                    int new_value1 = Integer.parseInt(result1.getText().toString());
-                    int result = old_value - new_value1;
-                    result1.setText(Integer.toString(result));
+                    float new_value1 = Float.parseFloat(result1.getText().toString());
+                    float result = old_value - new_value1;
+                    result1.setText(Float.toString(result));
                     s = false;
                 }
 
                 if (m == true) {
-                    int new_value2 = Integer.parseInt(result1.getText().toString());
-                    int result = old_value * new_value2;
-                    result1.setText(Integer.toString(result));
+                    float new_value2 = Float.parseFloat(result1.getText().toString());
+                    float result = old_value * new_value2;
+                    result1.setText(Float.toString(result));
                     m = false;
                 }
 
                 if (d == true) {
-                    int new_value3 = Integer.parseInt(result1.getText().toString());
-                    int result = old_value / new_value3;
-                    result1.setText(Integer.toString(result));
+                    float new_value3 = Float.parseFloat(result1.getText().toString());
+                    float result = old_value / new_value3;
+                    result1.setText(Float.toString(result));
                     d = false;
                 }
 
