@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
     boolean m = false;
     boolean d = false;
     boolean e = false;
+    boolean n = false;
+    boolean r = false;
     //int new_value = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +39,8 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
         Button divide = (Button) findViewById(R.id.divide);
         Button clear = (Button) findViewById(R.id.clear);
         Button equal = (Button) findViewById(R.id.equal);
-        // Button point = (Button) findViewById(R.id.point);
+        Button negative = (Button) findViewById(R.id.negative);
+        Button raise = (Button) findViewById(R.id.raise);
         final TextView result1 = (TextView) findViewById(R.id.textView);
 
         one.setOnClickListener(new View.OnClickListener() {
@@ -138,6 +141,24 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
             public void onClick(View v) {
                 old_value = 0;
                 result1.setText("");
+            }
+        });
+        negative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                n = true;
+                old_value = Float.parseFloat(result1.getText().toString());
+                float result = old_value * -1;
+                result1.setText(Float.toString(result));
+            }
+        });
+        raise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                r = true;
+                old_value = Float.parseFloat(result1.getText().toString());
+                float  result = old_value * old_value;
+                result1.setText(Float.toString(result));
             }
         });
         equal.setOnClickListener(new View.OnClickListener() {
